@@ -11,7 +11,7 @@ const Directory = ({categories}) => {
                     <CategoryItem key={category.id} category={category} />
                 ))
             }
-    </div>
+        </div>
     );   
 }
 
