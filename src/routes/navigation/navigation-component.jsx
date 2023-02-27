@@ -15,6 +15,7 @@ import CartIcon from "../../components/cart-icon/cart-icon.component";
 
 const Navigation = () => {
     const {currentUser} = useContext(UserContext);
+    
     const {isCartOpen} = useContext(CartContext);
 
     return (
