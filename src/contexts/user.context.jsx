@@ -1,7 +1,10 @@
 // Import Hooks
 import { createContext, useState, useEffect } from "react";
 
-import { onAuthStateChangedListener, createUserDocumentFromAuth } from "../routes/utils/firebase/firebase.utils";
+import { 
+        onAuthStateChangedListener, 
+        createUserDocumentFromAuth 
+    } from "../routes/utils/firebase/firebase.utils";
 
 // create and set default value for the UserContext
 export const UserContext = createContext({ 
@@ -19,6 +22,8 @@ export const UserProvider = ({children})=> {
             if(user){
                 createUserDocumentFromAuth(user);
             }
+
+            setCurrentUser(user);
         });
         return unsubcribe;
     },[]);
