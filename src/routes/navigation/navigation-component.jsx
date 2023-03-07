@@ -21,8 +21,9 @@ import {
 } from "./navigation.styles";
 
 const Navigation = () => {
-    const {currentUser} = useContext(UserContext);
     
+    const {currentUser} = useContext(UserContext);
+
     const {isCartOpen} = useContext(CartContext);
 
     return (
