@@ -6,19 +6,20 @@ import ProductCard from '../../components/product-card/product-card.component';
 
 import { useSelector } from 'react-redux';
 
-import { selectCategoriesMap } from '../../store/categories/categories.selector';
+import { selectCategories } from '../../store/categories/categories.selector';
 
 import './category.styles.scss';
 
 const Category = () => {
   
   const { category } = useParams();
-  
-  const categoriesMap = useSelector(selectCategoriesMap);
+  // console.log("Category component rendered");
+  const categoriesMap = useSelector(selectCategories);
 
   const [products, setProducts] = useState(categoriesMap[category]);
 
   useEffect(() => {
+    // console.log("Set proudct rendered")
     setProducts(categoriesMap[category]);
   }, [category, categoriesMap]);
 
