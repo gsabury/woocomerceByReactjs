@@ -12,7 +12,7 @@ import Shop from "./routes/shop/shop-component";
 import Checkout from "./routes/checkout/checkout.component";
 
 import { setCurrentUser } from './store/user/user.action';
-import { onAuthStateChangedListener, createUserDocumentFromAuth } from "./routes/utils/firebase/firebase.utils";
+import { onAuthStateChangedListener, createUserDocumentFromAuth } from "./utils/firebase/firebase.utils";
 
 
 const App = ()=>{
