@@ -17,7 +17,7 @@ import {
 const ProductCard = ({product}) => {
     const {name, imageUrl, price} = product;
 
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);
 
     const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
