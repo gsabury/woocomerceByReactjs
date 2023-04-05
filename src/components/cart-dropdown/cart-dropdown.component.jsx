@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 
 import Button from "../Button/button-component";
+
 import CartItem from "../cart-item/cart-item.component";
 
 import { 
@@ -15,9 +16,10 @@ import {
         from "./cart.dropdown.styles";
 
 const CardDropdown = () => {
+    
     const cartItems = useSelector(selectCartItems);
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
     const goToCheckoutHandler = () => {
         navigate('/checkout');
     };

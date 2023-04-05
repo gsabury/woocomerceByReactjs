@@ -1,14 +1,12 @@
 
 import { useEffect } from 'react';
-
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from "react-router-dom";
 
-import { useDispatch } from 'react-redux';
-
-import Home from "./routes/home/home-component";
 import Navigation from "./routes/navigation/navigation-component";
-import Auth from "./routes/auth/auth.component";
+import Home from "./routes/home/home-component";
 import Shop from "./routes/shop/shop-component";
+import Auth from "./routes/auth/auth.component";
 import Checkout from "./routes/checkout/checkout.component";
 
 import { setCurrentUser } from './store/user/user.action';
@@ -19,7 +17,7 @@ const App = ()=>{
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
+      useEffect(() => {
         const unsubscribe = onAuthStateChangedListener((user) => {
           if (user) {
             createUserDocumentFromAuth(user);
