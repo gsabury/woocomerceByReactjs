@@ -3,11 +3,6 @@ import { useState } from "react";
 
 import { useDispatch } from 'react-redux';
 
-import { 
-    createAuthUserWithEmailAndPassword , 
-    createUserDocumentFromAuth } 
-    from "../../utils/firebase/firebase.utils";
-
 import FormInput from "../../components/form-inputs/form-input.component";
 import Button, {BUTTON_TYPE_CLASSES} from "../../components/Button/button-component";
 

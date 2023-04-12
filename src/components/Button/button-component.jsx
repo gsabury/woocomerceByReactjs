@@ -16,13 +16,10 @@ const getButton = (buttonType = "base") => {
     switch(buttonType){
         case "google-sign-in":
             return GoogleSignInButton;
-        break;
         case "inverted":
             return InvertedButton;
-        break;
         default:
             return BaseButton;
-        break;
     }
 }
 
