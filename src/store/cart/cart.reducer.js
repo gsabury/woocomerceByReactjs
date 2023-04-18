@@ -22,6 +22,8 @@ const INITIAL_STATE = {
               ...state,
               isCartOpen: payload,
             };
+        case CART_ACTION_TYPES.MAKE_CART_EMPTY:
+          return INITIAL_STATE;
       default:
         return state;
     }
